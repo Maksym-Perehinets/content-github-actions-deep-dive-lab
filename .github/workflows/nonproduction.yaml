@@ -1,0 +1,19 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chek Out
+        uses: actions/checkout@v4.1.5
+      - name: Set up node
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 14
+      - name: Build site
+        run: |
+          npm ci
+          npm run build
