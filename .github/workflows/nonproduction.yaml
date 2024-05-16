@@ -10,7 +10,7 @@ jobs:
       BUCKE_NAME: cfst-3457-dcda1c040b8f89f67c33836ce8-nonprodbucket-lxespreb6cop
     steps:
       - name: Chek Out
-        uses: actions/checkout@4.1.5
+        uses: actions/checkout@v4.1.5
       - name: configure aws cli
         uses: aws-actions/configure-aws-credentials@v4
         with:
